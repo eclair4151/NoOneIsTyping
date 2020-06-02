@@ -1,5 +1,6 @@
 include $(THEOS)/makefiles/common.mk
 
+ARCHS = arm64 arm64e
 TWEAK_NAME = NoOneIsTyping
 NoOneIsTyping_FILES = Tweak.xm
 

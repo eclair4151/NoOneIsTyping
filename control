@@ -1,7 +1,7 @@
 Package: com.shemeshapps.nooneistyping
 Name: No One Is Typing
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 0.0.2
 Architecture: iphoneos-arm
 Description: Blocks snapchat "is typing..." push notifications. There are no settings to configure
 Maintainer: ShemeshApps
