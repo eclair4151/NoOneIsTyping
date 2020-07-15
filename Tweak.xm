@@ -17,7 +17,7 @@
 	NSString *publisherBulletinID = [request.publisherBulletinID lowercaseString];
 	NSString *appId = (NSString *)arg2;
 
-	if (!([appId isEqualToString:@"com.toyopagroup.picaboo"] && [publisherBulletinID hasPrefix:@"typing"])) {
+	if (!([appId isEqualToString:@"com.toyopagroup.picaboo"] && ([publisherBulletinID hasPrefix:@"typing"] || [publisherBulletinID hasPrefix:@"mischief_typing"]))) {
 	 	%orig;
 	} 
 }
@@ -26,8 +26,9 @@
 	BBBulletinRequest *request = ((BBBulletinRequest *)arg1);
 	NSString *publisherBulletinID = [request.publisherBulletinID lowercaseString];
 	NSString *appId = (NSString *)arg2;
+	HBLogDebug(@"HODOR - got notif - %@", publisherBulletinID);
 
-	if (!([appId isEqualToString:@"com.toyopagroup.picaboo"] && [publisherBulletinID hasPrefix:@"typing"])) {
+	if (!([appId isEqualToString:@"com.toyopagroup.picaboo"] && ([publisherBulletinID hasPrefix:@"typing"] || [publisherBulletinID hasPrefix:@"mischief_typing"]))) {
 	 	%orig;
 	}
 }
